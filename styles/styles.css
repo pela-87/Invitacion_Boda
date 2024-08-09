@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'GreatVibes';
+    src: url(/fonts/GreatVibes-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FrederickatheGreat';
+    src: url(/fonts/FrederickatheGreat-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hurricane';
+    src: url(/fonts/Hurricane-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RougeScript';
+    src: url(/fonts/RougeScript-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClickerScript';
+    src: url(/fonts/ClickerScript-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Niconne';
+    src: url(/fonts/Niconne-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Parisienne';
+    src: url(/fonts/Parisienne-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
+    background-color: #d1a73adb !important;
+}
+
+.centrar{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.fullscreen-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* 100% del viewport height */
+}
+
+#section1{
+    height: 50vh;
+}
+
+.presentacion-imagen img {    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+}
+/*
+.bienvenida{
+*/
+    /* position: relative;
+    display: inline-block;
+    text-align: center; */
+    /*
+    background-image: linear-gradient(rgba(160, 22, 22, 0.5),rgba(74, 167, 170, 0.5)), url(../imagenes/imagen3.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+*/
+
+/* #section1 .section .bienvenida{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../imagenes/imagen3.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+} */
+.text-float{
+    position: absolute;
+    transform: translate(30%, 0%);
+}
+
+.presentacion_texto{
+    top: 10%;
+    left: -5%;
+    font-family: GreatVibes;
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: #75f17c;
+}
+
+.presentacion_cont_persona{
+    width: 50%;
+    text-align: center;
+}
+
+.presentacion_personas{
+    top: 50%;
+    left: -4%;
+    font-family: FrederickatheGreat;
+    font-weight: 400;
+    color: rgb(176, 241, 101);
+    font-size: 1.5rem;
+
+}
