@@ -67,13 +67,19 @@ body {
 .centrar{
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .fullscreen-section {
     position: relative;
     width: 100%;
-    height: 70vh; /* 100% del viewport height */
+    height: 70vh; /* 100% del viewport height */    
+}
+
+.caja_secciones{
+    border-color: black;
+    border-width: 10px;
+    border-style: double;
 }
 
 #section1{
@@ -108,7 +114,7 @@ body {
 } */
 .text-float{
     position: absolute;
-    transform: translate(30%, 0%);
+    /* transform: translate(30%, 0%); */
 }
 
 .presentacion_texto{
@@ -117,7 +123,8 @@ body {
     font-family: GreatVibes;
     font-weight: 400;
     font-size: 2.4rem;
-    color: #75f17c;
+    color: #f1fc8f;
+    left: 10%;
 }
 
 .presentacion_cont_persona{
@@ -127,10 +134,17 @@ body {
 
 .presentacion_personas{
     top: 50%;
-    left: -4%;
+    left: 10%;
     font-family: FrederickatheGreat;
     font-weight: 400;
     color: rgb(176, 241, 101);
     font-size: 1.5rem;
+}
 
+#section2{
+    /* width: 300px;
+    height: 150px; */
+    /* border-color: black;
+    border-width: 10px;
+    border-style: double; */
 }
