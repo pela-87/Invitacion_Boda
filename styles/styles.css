@@ -80,6 +80,8 @@ body {
     border-color: black;
     border-width: 10px;
     border-style: double;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #section_presentacion{
@@ -122,18 +124,43 @@ body {
     font-size: 1.5rem;
 }
 
-.centrar_fechas{
+.centrar_fechas_anillo{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     font-family: RougeScript;
+}
+
+.fecha_evento_texto{
+    font-size: 2.5rem;
+    color: #226d22;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.fecha_evento_anillos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 20%;
+    
+}
+
+.fecha_evento{
     font-size: 3.5rem;
     color: #fff;
 }
 
 .restan{
     text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .cuenta-atras{
@@ -143,17 +170,13 @@ body {
     justify-content: center;
 }
 
-.restan{
-    font-size: 1.5rem;
-}
-
 .grupo {
     line-height: 1;
 }
 
 .regresiva_numero{
     font-size: 2.3rem;
-    
+
 }
 
 .regresiva_texto{
