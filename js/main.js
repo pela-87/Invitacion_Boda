@@ -39,7 +39,7 @@ let intervalo = setInterval(() => {
         v_hora.innerHTML = '00';
         v_minuto.innerHTML = '00';
         v_segundo.innerHTML = '00';
-        v_completado.innerHTML = '<p>¡La espera termino.!</p>'
+        v_completado.innerHTML = '<p>¡La espera termino!</p>'
     }
 
 },1000);
