@@ -47,6 +47,33 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodoniModa';
+    src: url(/fonts/BodoniModa-VariableFont_opsz_wght.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodoniModaSC';
+    src: url(/fonts/BodoniModaSC-VariableFont_opsz_wght.ttf);
+    font-weight: 500;   
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url(/fonts/Lora-VariableFont_wght.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -107,7 +134,7 @@ body {
 .presentacion_texto{
     top: 10%;
     left: -5%;
-    font-family: GreatVibes;
+    font-family: 'GreatVibes';
     font-weight: 400;
     font-size: 2.4rem;
     color: #f1fc8f;
@@ -122,13 +149,13 @@ body {
 .presentacion_personas{
     top: 50%;
     left: 10%;
-    font-family: FrederickatheGreat;
+    font-family: 'FrederickatheGreat';
     font-weight: 400;
     color: rgb(176, 241, 101);
     font-size: 1.5rem;
 }
 
-.centrar_fechas_anillo{
+.centrar_elementos{
     display: flex;
     /* flex-wrap: nowrap; */
     flex-direction: column;
@@ -136,7 +163,7 @@ body {
 }
 
 .texto_noFaltes{
-    font-family: RougeScript;
+    font-family: 'RougeScript';
     font-size: 2.5rem;
     color: #226d22;
     font-weight: 400;
@@ -146,7 +173,7 @@ body {
     margin-bottom: 5%;
 }
 
-.fecha_evento_anillos{
+.head_anillos{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -157,7 +184,7 @@ body {
 .fecha_evento{
     font-size: 3.5rem;
     color: #fff;
-    font-family: RougeScript;
+    font-family: 'RougeScript';
 }
 
 .mensaje_regresiva{
@@ -188,7 +215,7 @@ body {
 }
 
 .titulo_tarjeta{
-    font-family: Niconne;
+    font-family: 'Niconne';
     font-size: 2.5rem;
     font-weight: 400;
     color: #063806;
@@ -199,9 +226,27 @@ body {
     margin-top: 5%;
 }
 
-.texto-iglesia{
+.btn-ubicacion a:hover{
+    background-color:rgb(71, 212, 66);
+    color:black;
+}
+
+.iglesia-separacion-texto{
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.texto-iglesia{
+    font-family: 'GreatVibes';
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.texto-iglesia-direc{
+    font-family: 'BodoniModa';
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: oblique;
 }
 
 .iglesia-hora{
