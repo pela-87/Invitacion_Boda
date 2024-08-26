@@ -84,11 +84,20 @@
 html, body {
     height: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 body {
     overflow-y: scroll; /* Permite el desplazamiento vertical */
-    background-color: #d1a73adb !important;
+    background-color: #88766f !important;
+    
+    background-image: url(/imagenes/fondo1.jpg);
+    /* filter: blur(2%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* width: 100%; */
+    height: 100vh; 
 }
 
 .centrar{
@@ -111,10 +120,6 @@ body {
     padding-bottom: 5%;
 }
 
-.centrar_textos{
-    text-align: center;
-}
-
 #section_presentacion{
     height: 50vh;
 }
@@ -124,6 +129,7 @@ body {
     left: 0;
     width: 100%;
     height: 50vh;
+    
 }
 
 .text-float{
@@ -157,9 +163,24 @@ body {
 
 .centrar_elementos{
     display: flex;
-    /* flex-wrap: nowrap; */
     flex-direction: column;
     align-items: center;
+}
+
+.centrar_elementos div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 25%;  
+}
+
+#section-fecha-evento .centrar_elementos > div:nth-child(n + 3){
+    font-size: 3.5rem;
+    color: #810e0e;
+    font-family: 'RougeScript';
+    width: 100%;
+    line-height: 1.5em;
 }
 
 .texto_noFaltes{
@@ -167,28 +188,20 @@ body {
     font-size: 2.5rem;
     color: #226d22;
     font-weight: 400;
-    /* text-align: center; */
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
 }
 
-.head_anillos{
+/* .head_anillos11{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
     width: 20%;   
-}
-
-.fecha_evento{
-    font-size: 3.5rem;
-    color: #fff;
-    font-family: 'RougeScript';
-}
+} */
 
 .mensaje_regresiva{
-    /* text-align: center; */
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -201,18 +214,18 @@ body {
     justify-content: center;
 }
 
-.grupo {
+.cuenta-atras > div{
     line-height: 1;
 }
 
-.regresiva_numero{
+#cuenta-atras > div > p:nth-child(1){
     font-size: 2.3rem;
-
 }
 
-.regresiva_texto{
+#cuenta-atras > div > p:nth-child(2){
     font-size: 1rem;
 }
+
 
 .titulo_tarjeta{
     font-family: 'Niconne';
@@ -231,25 +244,47 @@ body {
     color:black;
 }
 
-.iglesia-separacion-texto{
-    margin-top: 2%;
-    margin-bottom: 2%;
+.ubicacion-separacion-texto > div:nth-child(n){
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;    
 }
 
-.texto-iglesia{
+.evento-ubicacion-texto{
+    font-family: 'GreatVibes';
+    font-weight: bold;
+    line-height: 2.1;
+}
+
+.evento-ubicacion-texto div:nth-child(1){
+    font-size: 2.2rem;
+    width: 100%;
+}
+
+.evento-ubicacion-texto div:nth-child(2){
+    text-shadow: rgb(9, 12, 8) 3px 5px 7px;
+    font-size: 2rem;    
+}
+
+.evento-ubicacion-texto div:nth-child(3){
+    font-size: 1.3rem;    
+    font-style: oblique;
+}
+
+
+/* .texto-iglesia{
     font-family: 'GreatVibes';
     font-size: 2.2rem;
     font-weight: bold;
-}
+} */
 
-.texto-iglesia-direc{
+/* .texto-iglesia-direc{
     font-family: 'BodoniModa';
     font-size: 1.3rem;
     font-weight: bold;
     font-style: oblique;
-}
+} */
 
-.iglesia-hora{
+/* .iglesia-hora{
     text-shadow: rgb(9, 12, 8) 3px 5px 7px;
     font-size: 2rem;
-}
+} */
