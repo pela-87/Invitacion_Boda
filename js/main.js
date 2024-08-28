@@ -1,5 +1,5 @@
 //Seteo la fecha del evento con el formato MMDDAAAA HH:MM:SS
-let fecha_evento = new Date("10/02/2024 20:10:00");
+let fecha_evento = new Date("11/02/2024 20:10:00");
 let msFecha = fecha_evento.getTime();
 
 //obtengo los elementos del DOM que contiene los 
@@ -43,3 +43,39 @@ let intervalo = setInterval(() => {
     }
 
 },1000);
+
+function copyToClipboard(text) {
+    // Intenta usar la API del portapapeles
+    navigator.clipboard.writeText(text).then(() => {
+        // Mostrar el tooltip de éxito
+        const tooltip = document.getElementById('tooltip');
+        tooltip.classList.add('show');
+        setTimeout(() => {
+            tooltip.classList.remove('show');
+        }, 2000); // El tooltip se oculta después de 2 segundos
+    }).catch(err => {
+        console.error('Error al copiar al portapapeles: ', err);
+        // Mostrar un mensaje de error
+        alert('No se pudo copiar al portapapeles. Intenta nuevamente.');
+    });
+}
+
+function setupCopyListener(iconId, textId) {
+    const icon = document.getElementById(iconId);
+    if (icon) {
+        icon.addEventListener('click', function() {
+            const text = document.getElementById(textId).innerText;
+            copyToClipboard(text);
+        });
+
+        // Añadir soporte para eventos táctiles
+        icon.addEventListener('touchend', function() {
+            const text = document.getElementById(textId).innerText;
+            copyToClipboard(text);
+        });
+    }
+}
+
+// Configura los listeners para los iconos de copiar
+setupCopyListener('pela-cbu', 'pela-cbu-text');
+setupCopyListener('pela-alias', 'pela-alias-text');
