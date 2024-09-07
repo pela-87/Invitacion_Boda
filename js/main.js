@@ -1,3 +1,5 @@
+/* MANEJO DE LA CUENTA REGRESIVA */
+
 //Seteo la fecha del evento con el formato MMDDAAAA HH:MM:SS
 let fecha_evento = new Date("11/02/2024 20:10:00");
 let msFecha = fecha_evento.getTime();
@@ -44,6 +46,8 @@ let intervalo = setInterval(() => {
 
 },1000);
 
+/* MANOJO DEL COPIADO DE LOS DATOS EN LOS ICONOS BANCO */
+
 function copyToClipboard(text) {
     // Intenta usar la API del portapapeles
     navigator.clipboard.writeText(text).then(() => {
@@ -71,7 +75,7 @@ function setupCopyListener(iconId, textId) {
         // Añadir soporte para eventos táctiles
         icon.addEventListener('touchend', function() {
             const text = document.getElementById(textId).innerText;
-            copyToClipboard(text);
+            copyToClipboard(trim(text));            
         });
     }
 }
@@ -79,3 +83,41 @@ function setupCopyListener(iconId, textId) {
 // Configura los listeners para los iconos de copiar
 setupCopyListener('pela-cbu', 'pela-cbu-text');
 setupCopyListener('pela-alias', 'pela-alias-text');
+
+
+/* MANEJO DE LA GALERIA DE IMAGENES */
+
+document.querySelectorAll('.image-container img').forEach(image =>{
+    image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');        
+    }
+});
+
+document.querySelector('.popup-image').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+};
+
+/* MANEJO DE LAS ESTRELLAS */
+
+const starsContainer = document.getElementById('stars-container');
+const starsCount = 100; // Número de estrellas
+
+for (let i = 0; i < starsCount; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    
+    // Posición inicial aleatoria
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.left = `${Math.random() * 100}vw`;
+    
+    // Tamaño y velocidad de parpadeo aleatorios
+    const size = Math.random() * 2 + 8;  // Tamaño entre 1px y 3px
+    const blinkDuration = Math.random() * 3 + 1;  // Duración entre 2s y 4s
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.animationDuration = `${blinkDuration}s`;
+    
+    // Añadir estrella al contenedor
+    starsContainer.appendChild(star);
+}
