@@ -6,6 +6,35 @@
 }
 
 @font-face {
+    font-family: 'Sevillana';
+    src: url(/fonts/Sevillana-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Niconne';
+    src: url(/fonts/Niconne-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: 'RougeScript';
+    src: url(/fonts/RougeScript-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'FrederickatheGreat';
     src: url(/fonts/FrederickatheGreat-Regular.ttf);
     font-weight: 400;
@@ -19,23 +48,10 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'RougeScript';
-    src: url(/fonts/RougeScript-Regular.ttf);
-    font-weight: 400;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'ClickerScript';
     src: url(/fonts/ClickerScript-Regular.ttf);
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Niconne';
-    src: url(/fonts/Niconne-Regular.ttf);
     font-weight: 400;
     font-style: normal;
 }
@@ -75,16 +91,21 @@
     font-style: normal;
 }
 
+*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;        
 }
 
 html, body {
     height: 100%;
     overflow: hidden;
     text-align: center;
+    background-color: #beccbd;
+    background-image: url(/imagenes/f_back_5.jfif);
+    /*f_back_1, f_back_5, f_back_3 */
 }
 
 /* Estilo básico para el tooltip */
@@ -107,21 +128,53 @@ html, body {
 
 body {
     overflow-y: scroll; /* Permite el desplazamiento vertical */
-    background-color: #88766f !important;
+    /* background-color: #88766f !important; */
+    /* background-image: url(/imagenes/marmol1.jpg); */
     
-    background-image: url(/imagenes/fondo12.jpg);
+    /* background-image: url(/imagenes/fondo12.jpg); */
     /* filter: blur(2%); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     /* width: 100%; */
-    height: 100vh; 
+    height: 100vh;     
 }
 
-.centrar{
+#stars-container {
+    position: fixed;
+    width: 98%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;  /* Tamaño base pequeño */
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgb(184, 235, 177), 0 0 12px rgb(172, 229, 151);
+    animation: blink 3s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.centra{
     display: flex;
     justify-content: space-around;
-    flex-direction: column;    
+    flex-direction: column; 
+    font-family: 'GreatVibes';        
+    /* color: #08691d;    */
+    color: #000;
+    font-weight: 400;   
 }
 
 .fullscreen-section {
@@ -147,7 +200,6 @@ body {
     left: 0;
     width: 100%;
     height: 50vh;
-    
 }
 
 .text-float{
@@ -156,27 +208,30 @@ body {
 }
 
 .presentacion_texto{
-    top: 10%;
-    left: -5%;
-    font-family: 'GreatVibes';
-    font-weight: 400;
+    top: 10px;    
     font-size: 2.4rem;
-    color: #f1fc8f;
-    left: 10%;
+    left: 55px;
+    font-family: 'GreatVibes';
+    /* font-weight: 400; */
+    /* color: #065631; */
+    color: #065631;
 }
 
-.presentacion_cont_persona{
+/* .presentacion_cont_persona{
     width: 50%;
-    /* text-align: center; */
-}
+    text-align: center;
+} */
 
 .presentacion_personas{
-    top: 50%;
-    left: 10%;
-    font-family: 'FrederickatheGreat';
-    font-weight: 400;
-    color: rgb(176, 241, 101);
-    font-size: 1.5rem;
+    top: 80px;
+    left: 19px;
+    font-family: 'Sevillana' !important;
+    /* font-weight: 400; */
+    /* color: rgba(4, 55, 48, 1); */
+    color: #065631;
+    font-size: 39px;
+    width: 90px;
+    line-height: 40px;
 }
 
 .centrar_elementos{
@@ -193,22 +248,24 @@ body {
     width: 25%;  
 }
 
-#section-fecha-evento .centrar_elementos > div:nth-child(n + 3){
+#section-fecha-evento .centrar_elementos > div:nth-child(3){
     font-size: 3.5rem;
     color: #810e0e;
-    font-family: 'RougeScript';
+    /* font-family: 'RougeScript'; */
     width: 100%;
-    line-height: 1.5em;
+    line-height: 1.2em;
+    /* font-weight: 400; */
 }
 
 .texto_noFaltes{
-    font-family: 'RougeScript';
-    font-size: 2.5rem;
-    color: #226d22;
-    font-weight: 400;
+    /* font-family: 'RougeScript';
+    color: #08691d;
+    font-weight: 400; */
+    font-size: 40px;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
+    color: #08691d;
 }
 
 /* .head_anillos11{
@@ -220,9 +277,10 @@ body {
 } */
 
 .mensaje_regresiva{
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #08691d;
 }
 
 .cuenta-atras{
@@ -230,6 +288,7 @@ body {
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .cuenta-atras > div{
@@ -237,24 +296,26 @@ body {
 }
 
 #cuenta-atras > div > p:nth-child(1){
-    font-size: 2.3rem;
+    font-size: 35px;
 }
 
 #cuenta-atras > div > p:nth-child(2){
-    font-size: 1rem;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 
 .titulo_tarjeta{
     font-family: 'Niconne';
     font-size: 2.5rem;
-    font-weight: 400;
+    /* font-weight: 400; */
     color: #063806;
     text-shadow: rgb(62, 153, 34) 1px 0 10px;
 }
 
 .btn-ubicacion{
     margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-ubicacion a:hover{
@@ -262,94 +323,162 @@ body {
     color:black;
 }
 
-.ubicacion-separacion-texto > div:nth-child(n){
+/* .ubicacion-separacion-texto > div:nth-child(n){
     margin-top: 2% !important;
     margin-bottom: 2% !important;    
-}
+} */
 
-.evento-ubicacion-texto{
+/* .evento-ubicacion-texto{
     font-family: 'GreatVibes';
     font-weight: bold;
     line-height: 2.1;
-}
+} */
 
 /* .evento-ubicacion-texto img{
     width: 104px;
 } */
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-    grid-template-rows: auto auto;  /* Dos filas automáticas */
-    gap: 10px; /* Espacio entre elementos (opcional) */
-    /* width: 100%; */
-    /* max-width: 800px; */
-     /* Ajusta el tamaño máximo según sea necesario */
-    margin: 25px 30px 10px 30px;
-
-    font-family: 'GreatVibes';
+    /* font-family: 'GreatVibes'; */
     font-weight: bold;
-    line-height: 1.7;    
-}
-
-.iglesia-item1 {
-    grid-column: 1 / 2; /* Ocupa la primera columna */
-    grid-row: 1; /* Ocupa la primera fila */
+    line-height: 1.3;    
+    /* font-size: 20px; */    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto; 
+    gap: 10px;
+    margin: 25px 30px 10px 30px;
 }
 
 .iglesia-item1, .salon-item2 {
-    font-size: 2.1rem;
+    font-size: 37px;
     width: 100% !important;
     justify-content: center;
     text-align: center;
 }
 
+.iglesia-item3, .salon-item3 {
+    font-size: 33px;
+}
+
+.iglesia-item4, .salon-item4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/* .grid-container, .grid-nosotros, .grid-nosotros2 {
+} */
+
+.iglesia-item2 img, .salon-item1 img {
+    border-radius: 15px;
+    border: 5px solid #4e814fbd;
+}
+
+.iglesia-item1, .iglesia-item3, .iglesia-item4, .salon-item1, .salon-item2, .salon-item3, .salon-item4 {
+    grid-column-start: 1; 
+}
+
 .iglesia-item2 {
-    grid-column: 2 / 3; /* Ocupa la segunda columna */
-    grid-row: 1/4; /* Ocupa la primera fila a la cuarta fila */
+    grid-column-start: 2; 
+}
+
+.iglesia-item1, .iglesia-item3, .iglesia-item4 {
+    grid-column-end: 2;
+}
+
+.iglesia-item2, .salon-item1, .salon-item2, .salon-item3, .salon-item4 {
+    grid-column-end: 3;
+}
+
+.iglesia-item1, .iglesia-item2, .salon-item1 {
+    grid-row-start: 1;
+}
+
+.salon-item2, .iglesia-item3 {
+    grid-row-start: 2;
+}
+
+.iglesia-item4, .salon-item3 {
+    grid-row-start: 3;
+}
+
+.salon-item4 {
+    grid-row-start: 4;
+}
+
+.iglesia-item2 {
+    grid-row-end: 4;
 }
 
 .iglesia-item2 img{
     width: 150px;
 }
 
-.salon-item1{
-    grid-column: 1 / 3;
-    grid-row: 1;    
-}
-
 .salon-item1 img{
     width: 300px;
 }
 
-.salon-item2{
-    grid-column: 1 / 3; /* Ocupa ambas columnas */
-    grid-row: 2; /* Ocupa la segunda fila */
-}
-
-.iglesia-item3 {
-    grid-column: 1 / 2; /* Ocupa ambas columnas */
-    grid-row: 2; /* Ocupa la segunda fila */
+/* .iglesia-item3, .salon-item3 {
     font-size: 2rem;
+} */
+
+
+
+/* 
+.nosotros-item1, .nosotros-item2, .nosotros-item3 {
+    align-content: center;
 }
 
-.salon-item3{
-    grid-column: 1 / 3; /* Ocupa ambas columnas */
-    grid-row: 3; /* Ocupa la segunda fila */
-    font-size: 2rem;
+.nosotros-item2 img {
+    transform: scaleX(-1);
 }
 
-.iglesia-item4 {
-    grid-column: 1 / 2; /* Ocupa ambas columnas */
-    grid-row: 3; /* Ocupa la tercera fila */
-    font-size: 1.3rem; 
+.nosotros-item1 img, .nosotros-item2 img, .nosotros-item3 img {
+    width: 150px;
 }
 
-.salon-item4{
-    grid-column: 1 / 3; /* Ocupa ambas columnas */
-    grid-row: 4; /* Ocupa la tercera fila */
-    font-size: 1.3rem; 
+.nosotros-item1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;    
 }
+
+.nosotros-item2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nosotros-item3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nosotros-item3 img {
+    width: 310px;
+}
+
+.nosotros-item4 img, .nosotros-item5 img {
+    width: 310px;
+}
+
+.nosotros-item4{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;    
+}
+
+.nosotros-item5{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+} */
 
 /* .evento-ubicacion-texto div:nth-child(1){
     width: 100px;
@@ -380,24 +509,28 @@ body {
     width: 110px;
 } */
 
-#section-regalo > div > div:nth-child(3) {
+#section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3) {
     margin: 8px 20px;
-    font-family: 'GreatVibes';
-    font-weight: 400;
-    font-size: 25px;
-    color: white;
+    /* font-family: 'GreatVibes'; */
+    /* font-weight: 400; */
+    font-size: 30px;
 }
 
 .ico-copy {
     width: 23px;
     height: 23px; 
-    margin-left: 20px;   
+    margin-left: 20px;
 } 
 
 .bancos {
     width: 80%;    
     text-align: center;
     margin-top: 5px;
+}
+
+.bancos > div > div {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
 }
 
 .bancos > div:first-child{
@@ -411,11 +544,10 @@ body {
     text-align: center;
 }
 
-.bancos > div > span {
-    font-weight: 400;
+.bancos > div > span {    
     font-size: 24px;
-    color: white;
-    font-family: 'Niconne';
+    color: #08691d;
+    font-weight: 600;
 }
 
 .bancos > div > div > div > span{
@@ -423,6 +555,86 @@ body {
     font-weight: 600;
 }
 
+#section-asistencia .confir_what {
+    line-height: 0.7;
+    margin-top: 20px;
+}
+
+#section-asistencia .confir_what p {
+    font-size: 28px;
+    color: #08691d;
+    font-weight: 600;    
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-container .image {
+    height: 250px;
+    width: 250px;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    border-radius: 12px;
+}
+
+.image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.popup-image {
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 7px solid #fff;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@media (min-width: 768px){
+    .popup-image img {
+        width: 780px;
+        height: 100%;
+    }
+}
 
 /* .texto-iglesia{
     font-family: 'GreatVibes';

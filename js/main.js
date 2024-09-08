@@ -83,6 +83,8 @@ function setupCopyListener(iconId, textId) {
 // Configura los listeners para los iconos de copiar
 setupCopyListener('pela-cbu', 'pela-cbu-text');
 setupCopyListener('pela-alias', 'pela-alias-text');
+setupCopyListener('emi-cbu', 'emi-cbu-text');
+setupCopyListener('emi-alias', 'emi-alias-text');
 
 
 /* MANEJO DE LA GALERIA DE IMAGENES */
