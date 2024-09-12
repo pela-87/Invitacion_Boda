@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/bootstrap-5.3.3/css/bootstrap.min.css">
-    <title>Secciones a Pantalla Completa</title>
+    <link rel="shortcut icon" href="/imagenes/ico-anillos-de-boda.png" title="anillo iconos">
+    <title>Invitación Boda Emilia y Jonatan</title>
 </head>
 
 <body>
-
+    
     <div id="stars-container"></div>
     <section class="fullscreen-section" id="section_presentacion">
         <div>
@@ -18,13 +18,20 @@
                 <img src="imagenes/portada.png" alt="Imagen 1">
             </div>
             <div class="presentacion_texto text-float">
-                <span>Nos casamos...!!</span>
+                <!-- <span>Nos casamos...!!</span> -->
+                 <span class="typed"></span>
+                 <div id="texto-presentacion">
+                    <p>
+                        Nos casamos...!!
+                    </p>
+                 </div>
             </div>
             <div class="presentacion_personas text-float">
-                <div>
-                    Emilia <br>
-                    & <br>
-                    Jonatan
+                <span class="typed-nosotros"></span>
+                <div id="nombre-nosotros">
+                    <p>
+                        M.Emilia & Jonatan
+                    </p>                    
                 </div>
                 <!-- <div class="presentacion_cont_persona">
                     <span>Emilia </span>
@@ -33,10 +40,27 @@
                 </div> -->
             </div>
         </div>
-    </section>
+        <!-- <audio src="/media/Reik - Creo en Ti.mp3" autoplay muted controls loop></audio> -->
+        <div id="audio-container">
+            <div id="audio-icon">
+                
+              <!-- <i class="bi bi-play-circle" id="pause"></i> -->
+              
+              <img id="pause" src="/imagenes/play-circle.svg" alt="">
+              <span id="play-pause-text">Play</span>
+              
+              <!-- <div>Subi el volumen<div> -->
+            </div>
+            <audio id="audio" src="/media/cancion.mp3" loop></audio>
+            <div>
 
+                <p>(Subí el volumen)</p>
+            </div>
+        </div>
+    </section>
+    
     <div class="centra">
-        <section class="fullscreen-section caja_secciones" id="section-fecha-evento">
+        <section class="fullscreen-section caja_secciones" id="section-fecha-evento">   
             <!-- <div style="display: flex;
                         flex-direction: column;">
 
@@ -63,7 +87,7 @@
                 margin-left: 15%;
                 margin-right: 15%;
                 margin-bottom: 5%;" -->
-                    No puedes faltar este día tan importante
+                    No puedes faltar a este día tan importante
                 </div>
                 <div>
                     Sábado <br>
@@ -80,7 +104,7 @@
         </section>
         <section class="fullscreen-section caja_secciones" id="section-cuenta-regresiva">
             <!-- <img src="/imagenes/recuadro1.png" style="position: absolute; transform: translate(-12%, -23%); height: 141%;"> -->
-            <div>
+            <!-- <div> -->
                 <div class="centrar_elementos">
                     <div>
                         <img src="/imagenes/anillos8.png">
@@ -110,7 +134,7 @@
                 <div class="mensaje_regresiva" id="completado">
 
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
         <section class="fullscreen-section caja_secciones" id="section-ceremonia">
             <!-- <img src="/imagenes/recuadro3.png" style="position: absolute; transform: translate(-15%, -10%); height: 114%; width: 141%;"> -->
@@ -141,7 +165,7 @@
                     <div class="iglesia-item4">Israel 26, Bahía Blanca</div>
                     <div class="iglesia-item3">20:00 hs.</div>
                 </div>
-                <div class="btn-ubicacion">
+                <div class="btn-general">
                     <!-- <a class="btn btn-outline-success" href="https://maps.app.goo.gl/c2DVoD1dKGg937s56" role="button">Ver Ubicación</a> -->
                     <a class="btn btn-success" href="https://maps.app.goo.gl/c2DVoD1dKGg937s56" role="button">Ver
                         Ubicación</a>
@@ -179,7 +203,7 @@
                     <div class="salon-item3">21:30 hs.</div>
                     <div class="salon-item4">Av. Naposta 761, Bahía Blanca</div>
                 </div>
-                <div class="btn-ubicacion">
+                <div class="btn-general">
                     <!-- <a class="btn btn-outline-success" href="https://maps.app.goo.gl/c2DVoD1dKGg937s56" role="button">Ver Ubicación</a> -->
                     <a class="btn btn-success" href="https://maps.app.goo.gl/TMFcYJnhcdREAqzK6" role="button">Ver
                         Ubicación</a>
@@ -200,8 +224,8 @@
                     una contribución económica sería ideal para nuestras
                     futuras metas juntos.
                     <br>
-                    Lo puedes hacer en efectivo colocándolo en un sobre, que podrás dipositar en la urna que encontrarás
-                    en la fiesta o por transferncia bancaria a nuestras cuentas.
+                    Lo puedes hacer en efectivo colocándolo en un sobre, que podrás depositar en la urna que encontrarás
+                    en la fiesta o por transferencia bancaria a nuestras cuentas.
                     <br>
                     ¡Muchas Gracias!
                 </div>
@@ -256,7 +280,7 @@
                                     </span>
                                 </b>
                             </div>
-                            <div>
+                            <div class="container">
                                 <b>
                                     <span>
                                         CBU:
@@ -267,7 +291,7 @@
                                 </span>
                                 <img src="/imagenes/copy.svg" class="ico-copy" id="emi-cbu">
                             </div>
-                            <div>
+                            <div class="container">
                                 <b>
                                     <span>
                                         Alias:
@@ -309,10 +333,10 @@
                     <p>
                         Emilia:
                     </p>
-                    <div class="btn-ubicacion">
+                    <div class="btn-general">
                         <a class="btn btn-success"
                             href="https://api.whatsapp.com/send?phone=+5492914427863&text=Con%20mucho%20gusto%20asistir%C3%A9/mos%20a%20la%20boda."
-                            role="button">Confirmar Asistencia</a>
+                            role="button">Confirmar asistencia</a>
                         <!-- <a class="btn btn-outline-success" href="https://maps.app.goo.gl/c2DVoD1dKGg937s56" role="button">Ver Ubicación</a> -->
                     </div>
                 </div>
@@ -320,10 +344,10 @@
                     <p>
                         Jonatan:
                     </p>
-                    <div class="btn-ubicacion">
+                    <div class="btn-general">
                         <a class="btn btn-success"
                             href="https://api.whatsapp.com/send?phone=+5492914130108&text=Con%20mucho%20gusto%20asistir%C3%A9/mos%20a%20la%20boda."
-                            role="button">Confirmar Asistencia</a>
+                            role="button">Confirmar asistencia</a>
                         <!-- <a class="btn btn-outline-success" href="https://maps.app.goo.gl/c2DVoD1dKGg937s56" role="button">Ver Ubicación</a> -->
                     </div>
                 </div>
@@ -336,6 +360,9 @@
                 </div>
                 <div class="titulo_tarjeta">
                     Nuestros momentos
+                </div>
+                <div>
+                    (toca cada foto)
                 </div>
                 <!-- <div class="grid-nosotros">                    
                     <div class="nosotros-item1">
@@ -359,9 +386,18 @@
             </div>
             <div class="image-container">
                 <div class="image">
-                    <img src="/imagenes/e_y_p_01.jpg" alt="">
+                    <img src="/imagenes/e_y_p_17.jpg" alt="">
                 </div>
                 <div class="image">
+                    <img src="/imagenes/e_y_p_18.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="/imagenes/e_y_p_19.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="/imagenes/e_y_p_01.jpg" alt="">
+                </div>
+                <div class="image image-redim">
                     <img src="/imagenes/e_y_p_02.jpg" alt="">
                 </div>
                 <div class="image">
@@ -372,6 +408,9 @@
                 </div>
                 <div class="image">
                     <img src="/imagenes/e_y_p_05.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="/imagenes/e_y_p_20.jpg" alt="">
                 </div>
                 <div class="image">
                     <img src="/imagenes/e_y_p_06.jpg" alt="">
@@ -385,8 +424,8 @@
                 <div class="image">
                     <img src="/imagenes/e_y_p_09.jpg" alt="">
                 </div>
-                <div class="image">
-                    <img src="/imagenes/e_y_p_10.jpg" alt="">
+                <div class="image image-redim">
+                    <img src="/imagenes/e_y_p_10.jpg" alt="" style="object-position: 0 -12px;">
                 </div>
                 <div class="image">
                     <img src="/imagenes/e_y_p_11.jpg" alt="">
@@ -400,27 +439,15 @@
                 <div class="image">
                     <img src="/imagenes/e_y_p_14.jpg" alt="">
                 </div>
-                <div class="image">
+                <div class="image image-redim">
                     <img src="/imagenes/e_y_p_15.jpg" alt="">
                 </div>
-                <div class="image">
+                <div class="image image-redim">
                     <img src="/imagenes/e_y_p_16.jpg" alt="">
-                </div>
-                <div class="image">
-                    <img src="/imagenes/e_y_p_17.jpg" alt="">
-                </div>
-                <div class="image">
-                    <img src="/imagenes/e_y_p_18.jpg" alt="">
-                </div>
-                <div class="image">
-                    <img src="/imagenes/e_y_p_19.jpg" alt="">
-                </div>
-                <div class="image">
-                    <img src="/imagenes/e_y_p_20.jpg" alt="">
-                </div>
+                </div>                                
             </div>
-            <div class="popup-image">
-                <!-- <span>&times;</span> -->
+            <div class="popup-image" id="popup-image">
+                <span>&times;</span>
                 <img src="/imagenes/e_y_p_01.jpg" alt="">
             </div>
         </section>
@@ -463,7 +490,8 @@
      -->
 </body>
 
-<script src="styles/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="styles/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script> -->
+ <script src="./js/typed.js"></script>
 <script src="./js/main.js"></script>
 
 </html>

@@ -118,6 +118,7 @@ html, body {
     border-radius: 3px;
     font-size: 12px;
     z-index: 1000;
+    transform: translateX(240px) translateY(-4px);    
 }
 .tooltip.show {
     display: block;
@@ -173,7 +174,7 @@ body {
     flex-direction: column; 
     font-family: 'GreatVibes';        
     /* color: #08691d;    */
-    color: #000;
+    /* color: #000; */
     font-weight: 400;   
 }
 
@@ -184,7 +185,7 @@ body {
 }
 
 .caja_secciones{
-    border-color: black;
+    border-color: rgba(26, 71, 19, 0.733);
     border-width: 10px;
     border-style: double;
     padding-top: 3%;
@@ -193,7 +194,47 @@ body {
 
 #section_presentacion{
     height: 50vh;
-    margin-top: 20px;
+    margin-top: 2px;
+}
+
+#audio-container {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 13px; */
+    /* margin-left: 20px; */
+    position: absolute;
+    z-index: 2;
+    left: 6%;
+    top: 105%;
+}
+
+#audio-container > div:nth-last-child(1) {
+    position: relative;
+    top: 37px;
+    /* left: -80px; */
+    right: 42%;
+    font-size: 14px;
+}
+
+#audio-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* color: #000000; */
+}
+
+#play-pause-text {
+    margin-left: 6px;
+    font-size: 25px;
+    color: #065631;
+    font-family: Arial, Helvetica, sans-serif;
+    /* padding-top: 3px; */
+}
+
+#pause {
+    width: 27px;
+    height: 27px;
 }
 
 .presentacion-imagen img {    
@@ -210,7 +251,7 @@ body {
 
 .presentacion_texto{
     top: 45px;    
-    font-size: 2.4rem;
+    font-size: 40px;
     left: 55px;
     font-family: 'GreatVibes';
     /* font-weight: 400; */
@@ -230,8 +271,8 @@ body {
     /* font-weight: 400; */
     /* color: rgba(4, 55, 48, 1); */
     color: #065631;
-    font-size: 39px;
-    width: 90px;
+    font-size: 38px;
+    width: 96px;
     line-height: 40px;    
 }
 
@@ -241,16 +282,16 @@ body {
     align-items: center;
 }
 
-.centrar_elementos div:nth-child(1){
+.centrar_elementos > div:first-child{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
-    width: 25%;  
+    width: 100px;  
 }
 
 #section-fecha-evento .centrar_elementos > div:nth-child(3){
-    font-size: 3.5rem;
+    font-size: 55px;
     color: #810e0e;
     /* font-family: 'RougeScript'; */
     width: 100%;
@@ -308,18 +349,18 @@ body {
 
 .titulo_tarjeta{
     font-family: 'Niconne';
-    font-size: 2.5rem;
+    font-size: 45px;
     /* font-weight: 400; */
     color: #063806;
     text-shadow: rgb(62, 153, 34) 1px 0 10px;
 }
 
-.btn-ubicacion{
+.btn-general{
     margin-top: 5%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn-ubicacion a:hover{
+.btn-general a:hover{
     background-color:rgb(71, 212, 66);
     color:black;
 }
@@ -345,6 +386,7 @@ body {
     line-height: 1.3;    
     /* font-size: 20px; */    
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto; 
     gap: 10px;
@@ -551,9 +593,8 @@ body {
     font-weight: 600;
 }
 
-.bancos > div > div > div > span{
+.container span {
     font-size: 16px;
-    font-weight: 600;
 }
 
 #section-asistencia .confir_what {
@@ -630,12 +671,312 @@ body {
     border-radius: 15px;
 }
 
-@media (min-width: 768px){
+#section-momentos .centrar_elementos div:nth-child(3) {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* @media (min-width: 425px){
     .popup-image img {
-        width: 780px;
-        height: 100%;
+        width: 400px;
+        height: 50%;
+    }
+} */
+
+@media (min-width: 768px){
+    .centra{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    #section_presentacion, .presentacion-imagen img {
+        height: 55vh;
+    }
+
+    .texto_noFaltes, .mensaje_regresiva{
+        font-size: 50px;
+    }
+
+    .titulo_tarjeta{
+        font-size: 50px;
+    }
+
+    #section-fecha-evento .centrar_elementos > div:nth-child(3) {
+        font-size: 62px;
+    }
+
+    .presentacion_texto{
+        font-size: 50px;
+        top: 30px;
+        left: 105px;
+    }
+
+    .presentacion_personas{
+        left: 50px;
+        font-size: 53px;
+        line-height: 52px;
+        text-align: right;
+    }
+
+    .caja_secciones > .centrar_elementos > div:nth-child(1) {
+        width: 140px;
+    }
+
+    #cuenta-atras > div > p:nth-child(1) {
+        font-size: 40px;
+    }
+
+    #cuenta-atras > div > p:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .iglesia-item1, .salon-item2 {
+        font-size: 42px;
+    }
+    
+    .iglesia-item3, .salon-item3 {
+        font-size: 38px;
+    }
+
+    .iglesia-item4, .salon-item4 {
+        font-size: 22px;
+    }
+
+    .iglesia-item2 img {
+        width: 170px;
+    }
+
+    .salon-item1 img {
+        width: 360px;
+        margin-bottom: 10px;
+    }
+
+    .btn-general a {
+        font-size: 19px;
+    }
+
+    .popup-image img {
+        width: 700px;                
+    }
+
+    #section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3) {
+        margin: 8px 25px;
+        font-size: 36px;
+    }
+
+    .bancos > div > span, #section-asistencia .confir_what p {
+        font-size: 28px;
+    }
+
+    .bancos > div > div > div:first-child {
+        font-size: 19px;
+    }
+
+    .container span {
+        font-size: 19px;
+    }
+
+    .ico-copy {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* #section-asistencia .confir_what p {
+        font-size: 33px;
+    } */
+
+    .tooltip {
+        transform: translateX(430px) translateY(8px);
+    }
+
+    #section-momentos .centrar_elementos div:nth-child(3) {
+        font-size: 17px;   
+    }
+
+    #audio-container {
+        left: 11%;
+        top: 106%;
+    }
+    
+    #audio-container > div:nth-last-child(1) {
+        top: 37px;
+        right: 42%;
+        font-size: 14px;
+    }
+       
+    #play-pause-text {
+        /* margin-left: 6px; */
+        font-size: 25px;
+    }
+    
+    #pause {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .image-redim img {
+        width: 450px;
+    }
+
+    .image-redim2 img {
+        width: 350px;
+    }
+
+    .image-redim3 img {
+        width: 300px;
     }
 }
+
+@media (min-width: 1024px){
+    .centra{
+        margin-left: 65px;
+        margin-right: 65px;
+    }
+
+    #section_presentacion, .presentacion-imagen img {
+        height: 70vh;
+    }
+
+    .texto_noFaltes, .mensaje_regresiva{
+        font-size: 60px;
+    }
+
+    .titulo_tarjeta{
+        font-size: 62px;
+    }
+
+    #section-fecha-evento .centrar_elementos > div:nth-child(3) {
+        font-size: 70px;
+    }
+
+    .presentacion_texto{
+        font-size: 64px;
+        top: 45px;
+        left: 119px;
+    }
+
+    .presentacion_personas{
+        left: 59px;
+        font-size: 65px;
+        line-height: 65px;
+        top: 160px;
+        text-align: right;
+    }
+
+    .caja_secciones > .centrar_elementos > div:nth-child(1) {
+        width: 190px;
+    }
+
+    #cuenta-atras > div > p:nth-child(1) {
+        font-size: 50px;
+    }
+
+    #cuenta-atras > div > p:nth-child(2) {
+        font-size: 25px;
+    }
+
+    .iglesia-item1, .salon-item2 {
+        font-size: 52px;
+    }
+    
+    .iglesia-item3, .salon-item3 {
+        font-size: 45px;
+    }
+
+    .iglesia-item4, .salon-item4 {
+        font-size: 27px;
+    }
+
+    .iglesia-item2 img {
+        width: 190px;
+    }
+
+    .salon-item1 img {
+        width: 420px;
+        margin-bottom: 15px;
+    }
+
+    /* .btn-general a {
+        font-size: 22px;
+    } */
+
+    .popup-image img {
+        width: 700px;        
+       
+    }
+
+    #section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3) {
+        margin: 8px 35px;
+        font-size: 40px;
+    }
+
+    .bancos > div > span, #section-asistencia .confir_what p {
+        font-size: 33px;
+    }
+
+    /* .bancos > div > div > div:first-child {
+        font-size: 19px;
+    } */
+
+    /* .container span {
+        font-size: 19px;
+    } */
+
+    /* .ico-copy {
+        width: 25px;
+        height: 25px;
+    } */
+
+    /* #section-asistencia .confir_what p {
+        font-size: 33px; 
+    }*/
+
+    .tooltip {
+        transform: translateX(530px) translateY(8px);
+    } 
+    
+    #section-momentos .centrar_elementos div:nth-child(3) {
+        font-size: 20px;   
+    }
+
+    #audio-container {
+        left: 11%;
+        top: 106%;
+    }
+    
+    #audio-container > div:nth-last-child(1) {
+        /* top: 37px;
+        right: 42%; */
+        font-size: 17px;
+    }
+       
+    #play-pause-text {
+        font-size: 28px;
+    }
+    
+    #pause {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* .image-redim img {
+        width: 450px;
+    } */
+
+    .image-redim2 img {
+        width: 500px;
+    }
+
+    .image-redim3 img {
+        width: 450px;
+    }
+}
+/* 
+@media (min-width: 1440px){
+    .popup-image img {
+        width: 1300px;               
+    }
+} */
 
 /* .texto-iglesia{
     font-family: 'GreatVibes';

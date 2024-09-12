@@ -91,14 +91,31 @@ setupCopyListener('emi-alias', 'emi-alias-text');
 
 document.querySelectorAll('.image-container img').forEach(image =>{
     image.onclick = () => {
-        document.querySelector('.popup-image').style.display = 'block';
-        document.querySelector('.popup-image img').src = image.getAttribute('src');        
+        document.querySelector('.popup-image').style.display = 'block';        
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+        var imgNombre = image.getAttribute('src').slice(16,-4);
+        const popup = document.getElementById('popup-image');
+        
+        popup.classList.remove('image-redim');
+        popup.classList.remove('image-redim2');
+        popup.classList.remove('image-redim3');
+
+        if (imgNombre === '02') {            
+            popup.classList.add('image-redim');
+        }
+        else if (imgNombre === '10'){
+            popup.classList.add('image-redim2');
+        }
+        else if (imgNombre === '13' || imgNombre === '15' || imgNombre === '16'){
+            popup.classList.add('image-redim3');
+        }
     }
 });
 
 document.querySelector('.popup-image').onclick = () =>{
     document.querySelector('.popup-image').style.display = 'none';
 };
+
 
 /* MANEJO DE LAS ESTRELLAS */
 
@@ -123,3 +140,61 @@ for (let i = 0; i < starsCount; i++) {
     // Añadir estrella al contenedor
     starsContainer.appendChild(star);
 }
+
+/* MANEJO DEL AUDIO */
+
+/* https://www.youtube.com/watch?v=wLiioj6dIEU */
+var audio = document.getElementById('audio');
+var pause = document.getElementById('pause');
+var playPauseText = document.getElementById('play-pause-text');
+var ico_play = "/imagenes/play-circle.svg";
+var ico_pause = "/imagenes/pause-circle.svg";
+
+pause.addEventListener("click", function() {
+
+    if (audio.paused) {
+    audio.play();
+    document.querySelector('#pause').src = ico_pause
+    playPauseText.textContent = "Pausa";
+} else {
+    audio.pause();
+    document.querySelector('#pause').src = ico_play
+    playPauseText.textContent = "Play";
+}
+});
+
+/* MANEJO DEL EFECTO MAQUINA DE ESCRIBIR */
+
+const typed = new Typed('.typed', {
+    // strings: ['Nos casamos...!!!'],
+    
+    stringsElement: '#texto-presentacion',
+    typeSpeed: 75,
+    startDelay: 300,
+    backSpeed: 75,
+    smartBackspace: true,
+    shuffle: false,
+    backDelay: 1500,
+    loop: true,
+    loopCount: false,
+    showCursor: true,
+    cursorChar: '|',
+    contentType: 'html',
+});
+
+const nombres = new Typed('.typed-nosotros', {
+    // strings: ['Nos casamos...!!!'],
+    
+    stringsElement: '#nombre-nosotros',
+    typeSpeed: 75,
+    startDelay: 300,
+    backSpeed: 75,
+    smartBackspace: true,
+    shuffle: false,
+    backDelay: 1500,
+    loop: true,
+    loopCount: false,
+    showCursor: true,
+    cursorChar: '|',
+    contentType: 'html',
+});
