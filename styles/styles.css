@@ -334,7 +334,7 @@ body {
 }
 
 .ico-copy {
-    width: 22px;
+    width: 21px;
     height: 21px; 
     margin-left: 6px;
 } 
@@ -553,12 +553,12 @@ body {
     }
 
     .container span {
-        font-size: 19px;
+        font-size: 17px;
     }
 
     .ico-copy {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 
     .tooltip {
