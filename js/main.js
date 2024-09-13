@@ -143,7 +143,6 @@ for (let i = 0; i < starsCount; i++) {
 
 /* MANEJO DEL AUDIO */
 
-/* https://www.youtube.com/watch?v=wLiioj6dIEU */
 var audio = document.getElementById('audio');
 var pause = document.getElementById('pause');
 var playPauseText = document.getElementById('play-pause-text');
