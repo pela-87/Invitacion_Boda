@@ -110,7 +110,7 @@ body {
 
 #section_presentacion{
     height: 50vh;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 #audio-container {
@@ -334,9 +334,9 @@ body {
 }
 
 .ico-copy {
-    width: 23px;
-    height: 23px; 
-    margin-left: 10px;
+    width: 22px;
+    height: 21px; 
+    margin-left: 6px;
 } 
 
 .bancos {
