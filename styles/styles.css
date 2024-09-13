@@ -194,7 +194,7 @@ body {
 
 #section_presentacion{
     height: 50vh;
-    margin-top: 2px;
+    margin-top: 5px;
 }
 
 #audio-container {
@@ -652,8 +652,8 @@ body {
 .popup-image span {
     position: absolute;
     top: 0;
-    right: 10px;
-    font-size: 30px;
+    right: 25px;
+    font-size: 50px;
     font-weight: bolder;
     color: #fff;
     cursor: pointer;
@@ -669,6 +669,14 @@ body {
     width: 350px;
     object-fit: cover;
     border-radius: 15px;
+}
+
+.image-redim2 img {
+    width: 300px;
+}
+
+.image-redim3 img {
+    width: 270px;
 }
 
 #section-momentos .centrar_elementos div:nth-child(3) {
@@ -753,6 +761,11 @@ body {
 
     .btn-general a {
         font-size: 19px;
+    }
+
+    .popup-image span {
+        right: 30px;
+        font-size: 65px;
     }
 
     .popup-image img {
@@ -899,6 +912,11 @@ body {
     /* .btn-general a {
         font-size: 22px;
     } */
+
+    .popup-image span {
+        right: 36px;
+        font-size: 75px;
+    }
 
     .popup-image img {
         width: 700px;        
