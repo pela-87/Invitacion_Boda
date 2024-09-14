@@ -1,7 +1,7 @@
 /* MANEJO DE LA CUENTA REGRESIVA */
 
 //Seteo la fecha del evento con el formato MMDDAAAA HH:MM:SS
-let fecha_evento = new Date("11/02/2024 20:10:00");
+let fecha_evento = new Date("11/02/2024 20:00:00");
 let msFecha = fecha_evento.getTime();
 
 //obtengo los elementos del DOM que contiene los 
