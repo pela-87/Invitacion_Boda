@@ -328,9 +328,14 @@ body {
     width: 300px;
 }
 
-#section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3), #section-video > div > div:nth-child(3) {
+#section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3), #section-video > div > div:nth-child(3), #section-video-resumen > div > div:nth-child(3) {
     margin: 8px 20px;
     font-size: 30px;
+}
+
+#section-video-resumen .invitacion_video iframe {
+    width: 380px;
+    height: 260px;
 }
 
 .ico-copy {
@@ -550,9 +555,14 @@ body {
         width: 700px;                
     }
 
-    #section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3), #section-video > div > div:nth-child(3) {
+    #section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3), #section-video > div > div:nth-child(3), #section-video-resumen > div > div:nth-child(3) {
         margin: 8px 25px;
         font-size: 36px;
+    }
+
+    #section-video-resumen .invitacion_video iframe {
+        width: 490px;
+        height: 280px;
     }
 
     .bancos > div > span, #section-asistencia .confir_what p {
@@ -695,9 +705,14 @@ body {
         width: 700px;        
     }
 
-    #section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3), #section-video > div > div:nth-child(3) {
+    #section-regalo > div > div:nth-child(3), #section-asistencia > div > div:nth-child(3), #section-video > div > div:nth-child(3), #section-video-resumen > div > div:nth-child(3) {
         margin: 8px 35px;
         font-size: 40px;
+    }
+
+    #section-video-resumen .invitacion_video iframe {
+        width: 680px;
+        height: 360px;
     }
 
     .bancos > div > span, #section-asistencia .confir_what p {
